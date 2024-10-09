@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables and Types</title>
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
+      <!-- Incluimos highlight.js -->
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+      <link rel="stylesheet" href="variablesStyles.css">
+      <!-- Iniciamos highlight.js -->
+      <script>hljs.highlightAll();</script>
+
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div class="title">
+        <div class="arrow-back">
+            <a class="bi bi-arrow-left-square-fill" href="index.html"></a>
+        </div>
+        <h1>VARIABLES AND TYPES</h1>
+    </div>
+    
+
+    <!-- Bloque de código -->
+    <pre><code class="language-csharp">
+                //Это библиотеки, из которых вы можете получить дополнительные команды для вашей программы
+
+        using System;
+        using System.Collections.Generic;
+        using System.Linq;
+        using System.Text;
+        using System.Threading.Tasks;
+
+        namespace Класс1
+        {
+            //это программа, в которой будет находиться весь наш код...
+            internal class Program
+            {
+                //Это главная статическая функция... это важно,
+                ///потому что это ядро нашей программы, без него программа не будет работать.
+                static void Main(string[] args)
+                {
+                    //code
+                    //типы данных:
+                    /*
+                    Когда вы создаете переменные... 
+                    они всегда должны быть вместе... 
+                    и в них НЕ должно быть символов типа «#$%&...». !» ... 
+                    лучший вариант - называть переменные по-английски...
+                    */
+                    string word = "HI, WORLD";
+                    Console.WriteLine(word); //тип данных для символов...
+                                            //таких как буквы или знаки : «#»#"$#$!
+                    
+                    Console.WriteLine(); //перенос строки
+                    
+                    int number = 1; //целочисленное значение data..... 1,2,3,4,5... 
+
+                    double number2 = 2.5;//это точка отсчета для десятичных чисел... 1.5, 2.5, 3.5....
+
+                    float number3 = 2.4f; /*Плавающее значение... 
+                                    которое также принимает десятичные числа... но чаще всего используется 
+                                    для вычисления денег... 
+                                        она имеет меньшую длину,
+                                        чем double... 7 десятичных цифр.
+                                    и в конце необходимо поставить знак f
+                                    */
+                    //Ввод данных:
+                    Console.WriteLine("Hi, anya"); //команда для печати сообщения
+                    Console.WriteLine("Введите цифру 1:");
+                    number = int.Parse(Console.ReadLine()); //хранить данные в
+                                                            //моей целочисленной переменной...
+                                                            //но допускаются только целочисленные значения...
+
+                    Console.WriteLine("Введите цифру 2:");
+                    number2 = double.Parse(Console.ReadLine());
+
+                    //Здесь мы проведем расчеты:
+                    double result = number + number2;
+
+
+
+                    //мы выводим результат:
+
+                    Console.WriteLine("сумма чисел: " +  result);
+
+                    Console.ReadKey(); //мы закрываем программу
+
+                }
+            }
+        }
+
+    </code></pre>
+</body>
+</html>

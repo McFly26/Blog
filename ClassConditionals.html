@@ -1,0 +1,114 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPLE AND COMPLEX CONDITIONALS</title>
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
+      <!-- Incluimos highlight.js -->
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+      <link rel="stylesheet" href="variablesStyles.css">
+      <!-- Iniciamos highlight.js -->
+      <script>hljs.highlightAll();</script>
+
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div class="title">
+        <div class="arrow-back">
+            <a class="bi bi-arrow-left-square-fill" href="index.html"></a>
+        </div>
+        <h1>SIMPLE AND COMPLEX CONDITIONALS</h1>
+    </div>
+    
+
+    <!-- Bloque de código -->
+    <pre><code class="language-csharp">
+        //Это библиотеки, из которых вы можете получить дополнительные команды для вашей программы
+
+        using System;
+        using System.Collections.Generic;
+        using System.Linq;
+        using System.Text;
+        using System.Threading.Tasks;
+        
+        namespace Класс1
+        {
+            //это программа, в которой будет находиться весь наш код...
+            internal class Program
+            {
+                //Это главная статическая функция... это важно,
+                ///потому что это ядро нашей программы, без него программа не будет работать.
+                static void Main(string[] args)
+                {
+                    //code
+                    //Условные конструкции:
+        
+                    // && is AND
+                    // || is OR
+        
+                    //если результат равен 1
+                    if (result == 1)
+                    {
+                        //выведите на экран следующий код:
+                        Console.WriteLine("результат 1");
+                    }
+                    //иначе:
+                    else
+                    {
+                        //сделайте этот код:
+                        Console.WriteLine("результат не равен 1");
+                    }
+        
+        
+                    //Теперь давайте рассмотрим кое-что посложнее:
+        
+                    Console.WriteLine("Введите свое имя:");
+                    string name = Console.ReadLine(); //мы сохраняем имя в нашей переменной...
+        
+                    Console.WriteLine("Пожалуйста, введите свой возраст: "); 
+                    int age = int.Parse(Console.ReadLine());//мы сохраняем целое число возраста в нашей переменной......
+        
+                    //знак плюс (>) и знак минус (<)
+                    if (age > 18)
+                    {
+                        Console.WriteLine(name + "совершеннолетний");
+                    }
+                    //иначе:
+                    else
+                    {
+                        Console.WriteLine("не достиг совершеннолетия");
+                    }
+        
+        
+                    /*другой вопрос:*/
+        
+                    // Создаем объект класса Random для генерации случайных чисел
+                    Random random = new Random();
+        
+                    // Генерация случайного целого числа от 0 до 99 (включительно)
+                    int randomNumber = random.Next(100);
+                    Console.WriteLine("Случайное целое число от 0 до 99: " + randomNumber);
+        
+                    // Генерация случайного целого числа в диапазоне от 1 до 10
+                    int randomRange = random.Next(1, 11);
+                    Console.WriteLine("Случайное целое число от 1 до 10: " + randomRange);
+        
+                    // Генерация случайного числа с плавающей запятой от 0.0 до 1.0
+                    double randomDouble = random.NextDouble();
+                    Console.WriteLine("Случайное число с плавающей запятой от 0.0 до 1.0: " + randomDouble);
+        
+                    // Генерация случайного числа с плавающей запятой в заданном диапазоне (например, от 1.5 до 5.5)
+                    double randomDoubleInRange = 1.5 + random.NextDouble() * (5.5 - 1.5);
+                    Console.WriteLine("Случайное число с плавающей запятой от 1.5 до 5.5: " + randomDoubleInRange);
+                    Console.readKey();
+                }
+            }
+        }
+        
+
+    </code></pre>
+</body>
+</html>
