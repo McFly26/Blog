@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAYS</title>
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
+      <!-- Incluimos highlight.js -->
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+      <link rel="stylesheet" href="variablesStyles.css">
+      <!-- Iniciamos highlight.js -->
+      <script>hljs.highlightAll();</script>
+
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div class="title">
+        <div class="arrow-back">
+            <a class="bi bi-arrow-left-square-fill" href="index.html"></a>
+        </div>
+        <h1>ARRAYS</h1>
+    </div>
+    
+
+    <!-- Bloque de código -->
+    <pre><code class="language-csharp">
+       
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Класс1
+{
+   
+    internal class Program
+    {
+        //Это главная статическая функция... это важно,
+        ///потому что это ядро нашей программы, без него программа не будет работать.
+        static void Main(string[] args)
+        {
+            //ARRAYS
+            //Массивы используются для хранения данных...
+            //таких как числа, строки, другие типы данных и объекты...
+
+            int[] vector = new int[5]; //Создадим вектор типа Integer... который вмещает 5 значений... это его длина...
+            
+            
+            //Введите данные в наш Array
+            for (int i = 0; i < vector.Length; i++) //мы переходим от 0 к длине массива, которая равна 5
+            {
+                Console.WriteLine("Введите номер " + i + " : ");
+                vector[i] = int.Parse(Console.ReadLine()); //Мы вводим данные в первую позицию... и так далее до максимума массива, который равен 5
+
+            }
+
+            //Мы распечатаем сохраненные данные:
+            Console.WriteLine();
+            Console.WriteLine("Введенные данные:");
+            Console.WriteLine("------------------");
+            for (int i = 0;i < vector.Length; i++)
+            {
+                Console.WriteLine(vector[i]); ////Каждое значение вектора выводится на печать
+            }
+            Console.WriteLine("------------------");
+            Console.ReadKey();
+        }
+    }
+}
+
+    </code></pre>
+</body>
+</html>

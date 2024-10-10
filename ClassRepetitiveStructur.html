@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REPETITIVE STRUCTURES</title>
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
+      <!-- Incluimos highlight.js -->
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+      <link rel="stylesheet" href="variablesStyles.css">
+      <!-- Iniciamos highlight.js -->
+      <script>hljs.highlightAll();</script>
+
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div class="title">
+        <div class="arrow-back">
+            <a class="bi bi-arrow-left-square-fill" href="index.html"></a>
+        </div>
+        <h1>REPETITIVE STRUCTURES</h1>
+    </div>
+    
+
+    <!-- Bloque de código -->
+    <pre><code class="language-csharp">
+        using System;
+        using System.Collections.Generic;
+        using System.Linq;
+        using System.Text;
+        using System.Threading.Tasks;
+        
+        namespace ConsoleApp1
+        {
+            internal class Program
+            {
+                static void Main(string[] args)
+                {
+                    Console.WriteLine("Введите число, чтобы нарисовать таблицу умножения: ");
+                    int nMult = int.Parse(Console.ReadLine()); //Введите число для умножения
+                    int n2 = 0; //Второе число для умножения инициализировано 0
+        
+        
+                    //WHILE Structure
+                    //используется, когда номер конца цикла НЕ известен...
+        
+        
+        
+                    //Пока (number2 = 0 ) меньше 12
+                    while (n2 < 12)
+                    {
+                        //Выполните следующий код:
+        
+                        n2++; //число2 увеличивается на 1 за каждый оборот цикла... 1,2,3,4.... до 12
+        
+                        ////Мы выводим таблицу умножения: (nMult + " x" + n2)  //Эта часть просто объединяет числа, чтобы они отображались по порядку... Они НЕ выполняют никаких операций...
+                        Console.WriteLine(nMult + " X " + n2 + " = " + n2*nMult); //он умножается только в конце... (n2*nMult) это и есть ответ... 
+                    }
+        
+        
+        
+                    //FOR Structure
+        
+                    //используется, когда известен номер конца цикла...
+                    Console.WriteLine();
+                    Console.WriteLine("введите число: ");
+        
+                    int number3 = int.Parse(Console.ReadLine());
+        
+                    Console.WriteLine() ;
+        
+                    //Числа начинаются с 0 --- пример 5 будет проходить через следующие позиции [0,1,2,3,4].
+                    for (int i = 0; i < number3; i++)
+                    {
+        
+                        //В рамках программы for могут быть выполнены различные расчеты 
+                        Console.WriteLine(i);
+                        // 0
+                        //1
+                        //2
+                        //....
+                    }
+        
+                    //Структура do while
+                    //используется для выполнения кода перед циклом.
+                    int option = 0;
+                    do
+                    {
+                        Console.WriteLine("Введите число больше 5, чтобы выйти из цикла...");
+                        option = int.Parse(Console.ReadLine());
+                        
+                    } while (option < 5); //пока опция меньше 5...
+                                          //оставайтесь в цикле...
+                                          //но если наоборот, выходите из цикла...
+        
+        
+        
+                    ////важно, чтобы программа не закрывалась....
+                    Console.ReadKey(); //Это ключ, который удерживает программу закрытой... важно использовать при использовании циклов...
+                }
+            }
+        }
+        
+
+    </code></pre>
+</body>
+</html>
